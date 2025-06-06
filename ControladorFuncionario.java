@@ -57,7 +57,7 @@ public class ControladorFuncionario {
         System.out.println("=== Folha de Pagamento ===");
         double total = 0.0;
         for (Funcionario f : listaFuncionarios) {
-            System.out.println("Nome: " + f.getNome() + " | Cargo: " + f.getCargo() + " | Salário: R$ " + f.getSalario() + "| Descontos:" + f.getDescontoINSS());
+            System.out.println("Nome: " + f.getNome() + " | Cargo: " + f.getCargo() + " | Salário Base: R$ " + f.getSalario() + "| Descontos: " + f.getDescontoINSS() + "| Horas Extras: "+ f.getValorHorasExtras()   + " | Salario Final: " + f.calcularSalarioFinal());
             total += f.calcularSalarioFinal();
         }
         System.out.println("Total da folha: R$ " + total);
